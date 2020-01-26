@@ -1,0 +1,3 @@
+﻿  simple.cpp
+C:\Users\Ricardo\source\repos\simple\simple\simple.cpp(15,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  simple.vcxproj -> C:\Users\Ricardo\source\repos\simple\Debug\simple.exe
