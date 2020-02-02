@@ -1,0 +1,4 @@
+Future Updates
+*change the mod number based on the number picked by the user.
+*add a # of guesses remaining
+*add error checks, like user entered a number larger than the limit

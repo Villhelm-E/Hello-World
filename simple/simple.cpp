@@ -4,12 +4,30 @@
 #include <iostream>
 #include <stdlib.h>
 #include <ctime>
+#include <math.h>
+#include <sstream>
 using namespace std;
+
+int count_numbers(int num) {
+	int count = 0;
+	while (num != 0) {
+		count++;
+		num /= 10;
+	}
+	return count;
+}
+
+int randbetween(int upperbound, int lowerbound, double rnd) {
+	return (upperbound - lowerbound + 1) * rnd + lowerbound;
+}
 
 int main()
 {
 	int i = 0;
 	int j = 0;
+	double p = 0;
+	int rn = 0;
+	int count = 0;
 	bool keepgoing = true;
 
 	srand(time(NULL));
@@ -18,8 +36,14 @@ int main()
 	cin >> i;
 
 	cout << "The number you entered is " << i << endl;
+	
+	rn = rand();
 
-	j = (i * (rand() % 100) / 100) + 1;
+	count = count_numbers(rn);
+
+	p = rn / pow(10, count);
+	
+	j = randbetween(i, 0, p);
 
 	while (keepgoing)
 	{
@@ -44,3 +68,4 @@ int main()
 
 	return 0;
 }
+
